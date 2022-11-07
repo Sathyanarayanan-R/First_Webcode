@@ -197,7 +197,9 @@ const nameBasedNationalityFinder = async (name) => {
         })
      } else {
         resDivTag1.setAttribute('class', 'bg-danger');
-        resDivTag1.innerText = "Not Found";
+        resDivTag1.innerHTML = "<text style = 'color: white'> Not Found! Please try with some other name";
+        spinnerEle.style.display = 'none';
+        resDivTag1.style.display = 'block';
      }
 
    } catch (error) {
